@@ -4,8 +4,12 @@ import Quantity from "./Quantity";
 function Product(props) {
   return (
     <span>
-      Item Name - Item Price -
-      <Quantity your props here />
+      {props.item.name} -${props.item.price} -
+      <Quantity
+        item={props.item}
+        onIncrementQuantity={props.onIncrementQuantity}
+        onDecrementQuantity={props.onDecrementQuantity}
+      />
     </span>
   );
 }
